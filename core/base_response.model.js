@@ -1,4 +1,3 @@
-const { BadRequestError, NotFoundError, InternalServerError, UnauthorizedError, ForbiddenError } = require('../helper/customError');
 
 
 class BaseResponse {
@@ -35,26 +34,6 @@ class BaseResponse {
 
     static error(message) {
         return new BaseResponse(false, null, message);
-    }
-
-    static BadRequestError(message) {
-        throw new BadRequestError(message);
-    }
-
-    static NotFoundError(message) {
-        throw new NotFoundError(message);
-    }
-
-    static InternalServerError(message) {
-        throw new InternalServerError(message);
-    }
-
-    static UnauthorizedError(message) {
-        throw new UnauthorizedError(message);
-    }
-
-    static ForbiddenError(message) {
-        throw new ForbiddenError(message);
     }
 }
 

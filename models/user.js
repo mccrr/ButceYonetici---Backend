@@ -16,7 +16,19 @@ const userSchema = new mongoose.Schema( {
     password: {
         type: String,
         required: 'Password is required.',
+    },
+    birthday: {
+        type: Date
+    },
+    age: {
+        type: Number
+    },
+    phone: {
+        type: String,
+    },
+    profilePic: {
+        type: String,
     }
 } );
 
-module.exports
+module.exports = mongoose.model('User', userSchema);
